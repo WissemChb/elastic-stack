@@ -1,0 +1,6 @@
+WissemChb.kibana
+WissemChb.redis
+WissemChb.logstash
+WissemChb.elasticsearch
+WissemChb.nginx
+WissemChb.agent

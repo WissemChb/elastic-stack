@@ -1,0 +1,14 @@
+---
+- hosts: multi
+  handlers:
+    - name: "restart logstash"
+      service:
+        name: logstash
+        state: restarted
+
+  
+  tasks:
+    - name:  "scaling logstash ..."
+      include: scaling-playbooks/logstash-scaling.yml hosts=logstash 
+
+  

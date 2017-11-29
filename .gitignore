@@ -1,0 +1,10 @@
+.vagrant
+elasticsearch
+java
+nginx
+redis-server
+logstash
+agent
+kibana
+install-playbooks/*.retry
+*.retry

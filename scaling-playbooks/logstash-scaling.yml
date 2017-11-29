@@ -1,0 +1,9 @@
+
+- name: "Configuring logstash (I/O) stream"
+  template:
+    src: ../templates/logstash-central.conf.j2
+    dest: /etc/logstash/conf.d/central.conf
+    owner: vagrant
+    mode: 0644
+  notify: restart logstash
+

@@ -1,0 +1,26 @@
+input {
+    redis {
+        host => "192.168.30.34"
+        data_type => "list"
+        type => "redis-input"
+        key => "logstash"
+    }
+    redis {
+        host => "192.168.30.35"
+        data_type => "list"
+        type => "redis-input"
+        key => "logstash"
+    }
+    syslog{
+        type => syslog  
+        port => 5514
+    }
+}
+
+output {
+    stdout{}
+    elasticsearch {
+        hosts => "{{ ansible_eth1.ipv4.address }}"
+        sniffing => true
+    }
+}
